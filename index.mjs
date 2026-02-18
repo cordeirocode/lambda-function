@@ -1,5 +1,5 @@
 import { log } from './log.mjs';
-import { S3 } from "aws-sdk/clients-s3";
+import S3 from "aws-sdk/clients/s3";
 
 const s3Client = new S3({ region: "us-east-2" });
 
@@ -16,7 +16,7 @@ export const handler = async (event) => {
 
     const mega_byte = 1024 * 1024;
 
-    if (getObjectResult.Contentlength > mega_byte) {
+    if (getObjectResult.ContentLength > mega_byte) {
       log(`File is too large`);
 
       return "ERROR: File is too large";

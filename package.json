@@ -1,0 +1,10 @@
+{
+  "name": "lambda-function",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Lambda function with S3 trigger",
+  "main": "index.mjs",
+  "dependencies": {
+    "aws-sdk": "^2.1690.0"
+  }
+}

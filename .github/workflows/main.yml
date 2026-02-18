@@ -10,11 +10,11 @@ jobs:
       - name: Generare ZIP
         run: |
           zip deployment.zip *.mjs
-      - name: primeiraFuncao
+      - name: default deploy
         uses: appleboy/lambda-action@master
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
-          function_name: gorush
+          function_name: primeiraFuncao
           zip_file: deployment.zip

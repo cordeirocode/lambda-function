@@ -10,7 +10,7 @@ jobs:
       - name: Generare ZIP
         run: |
           zip deployment.zip *.mjs
-      - name: firstFunction
+      - name: primeiraFuncao
         uses: appleboy/lambda-action@master
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
